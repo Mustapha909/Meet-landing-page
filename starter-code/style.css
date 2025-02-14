@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: repeating-linear-gradient(
+    to right,
+    white 0rem,
+    white 1.25rem,
+    rgba(224, 224, 224, 0.15) 1.25rem,
+    rgba(224, 224, 224, 0.15) 3.75rem
+  );
+}
+
+.nav {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  gap: 2rem;
+  max-height: 1440px;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 26rem;
+}
+
+.hero__content h1 {
+  font-size: 64px;
+  line-height: 110%;
+  letter-spacing: 0;
+  font-weight: 700;
+  color: #28283d;
+  text-align: center;
+}
+
+.hero__content p {
+  font-size: 18px;
+  line-height: 110%;
+  letter-spacing: 0;
+  font-weight: 400;
+  color: #87879d;
+  text-align: center;
+}
+
+.hero__buttons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  padding: 1.5rem 3rem;
+  font-size: 16px;
+  line-height: 110%;
+  letter-spacing: 0;
+  font-weight: 700;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.hero__buttons .btn--primary {
+  background-color: #4d96a9;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.hero__buttons .btn--secondary {
+  background-color: #855fb1;
+}
+
+.btn--primary span {
+  color: #8fe3f9;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.info__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding-top: 40px;
+}
+
+.info-img {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.info__content img {
+  width: 15%;
+  height: 50%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+.info-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 35%;
+}
+
+.info-text .inf-headings {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.info-text h4 {
+  padding-top: 40px;
+  color: #4d96a9;
+  text-align: center;
+  font-size: 16px;
+  line-height: 110%;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.info-text h3 {
+  font-size: 40px;
+  line-height: 110%;
+  letter-spacing: 0;
+  font-weight: 700;
+  color: #28283d;
+  text-align: center;
+}
+
+.info-text p {
+  width: 90%;
+  font-size: 18px;
+  line-height: 110%;
+  letter-spacing: 0;
+  font-weight: 400;
+  color: #87879d;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.line {
+  width: 2px;
+  height: 60px; /* Adjust as needed */
+  background-color: rgba(51, 51, 51, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+/* Circle overlaps the footer */
+.circle {
+  width: 40px;
+  height: 40px;
+  background-color: white; /* More transparent inside */
+  color: rgba(51, 51, 51, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-weight: bold;
+  border: 2px solid rgba(51, 51, 51, 0.1);
+  position: absolute;
+  bottom: -20px;
+  z-index: 2;
+}
+
+.footer {
+  width: 100%;
+  height: 300px;
+  background-image: url(./assets/desktop/image-footer.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+}
+
+/* Overlay */
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(77, 150, 169, 0.6); /* Semi-transparent overlay */
+  z-index: 1;
+}
+
+/* Ensure content appears above the overlay */
+.footer * {
+  position: relative;
+  z-index: 2;
+}
+
+.footer .btn--footer {
+  background-color: #855fb1;
+}
+
+.footer .btn--footer span {
+  color: #d9b8ff;
+}
+
+.footer h5 {
+  font-size: 40px;
+  line-height: 110%;
+  letter-spacing: 0;
+  font-weight: 700;
+  max-width: 20%;
+}
+
+.footer p {
+  font-size: 18px;
+  line-height: 110%;
+  letter-spacing: 0;
+  font-weight: 400;
+  max-width: 20%;
+}
